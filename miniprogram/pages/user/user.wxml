@@ -1,0 +1,45 @@
+<view class="container">
+  <view class="backpicture">
+    <image class="backimage" src='/image/msc.jpg' mode='scaleToFill'></image>
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class='button0' > <text class='textlogin'>{{"登录"}}</text> </button>
+    <block wx:else>
+    <image bindtap="bindViewTap" src="{{userInfo.avatarUrl}}" class='image-person'></image>
+    <image src='/image/cog-fill.png' class='info-set' mode='scaleToFill' bindtap="bindViewTap"></image>  
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+    <image src='/image/xiaoxi.png' class='xiaoxi' bindtap="getbookinfo"></image>
+    
+    <image class="infoimage" src='/image/mmm.png' mode='scaleToFill' wx:if="{{redspot}}"></image>
+  </view>
+    <view class='workshow'>
+      作品集
+    </view>
+      
+
+
+   <!-- <button bindtap="praisedefault" class='button' hover-class="other-button-hover">
+      <text class='after' wx:if="{{praise}}">{{" 点赞"}}</text>
+      <text class='before' wx:else>{{" 点赞"}}</text>
+     
+    </button>
+
+
+    <button bindtap="collectdefault" class='button' hover-class="other-button-hover">
+      <text class='after' wx:if="{{collect}}">{{"收藏"}}</text>
+      <text class='before' wx:else>{{"收藏"}}</text>
+      
+    </button>
+    -->
+
+  <view class='lookview' >
+      <image  wx:for="{{works}}" wx:if="{{item.fileID[0]}}" src='{{item.fileID[0]}}' class='image' mode="aspectFill" bindtap='oneclick' id ="{{index}}"></image>
+
+    <!--<view wx:if="{{praise}}" class='work'>
+    </view>
+
+    <view wx:if="{{collect}}" class='work'>
+    </view>
+-->
+  </view>
+
+</view>

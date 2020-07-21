@@ -1,0 +1,39 @@
+/**index.wxss**/
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.image {
+  margin-bottom: 5rpx;
+  width: 100%;
+  height: 240px;
+}
+
+.firstpage {
+  width: 100%;
+  position: relative;
+}
+
+.image-person {
+  position: absolute;
+  bottom: 15px;
+  left: 32px;
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+
+.workname {
+  width: 100%;
+  height: 30px;
+  position: absolute;
+  left: 23px;
+  right: 0;
+  bottom: 28px;
+  margin: auto;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+}

@@ -1,0 +1,7 @@
+<!--index.wxml-->
+<view class="index-container">
+  <view class='firstpage' wx:for="{{showworks}}" wx:if="{{works.length-item>=0&&works[works.length-item].fileID[0]}}">
+    <image class="image" src='{{works[works.length-item].fileID[0]}}' id="{{works.length-item}}" mode="aspectFill" bindtap='oneclick' />
+    <text class="workname">{{works[works.length-item]._id}}</text>
+  </view>
+</view>

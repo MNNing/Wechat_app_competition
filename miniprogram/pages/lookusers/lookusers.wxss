@@ -1,0 +1,107 @@
+/* pages/lookusers/lookusers.wxss */
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.tool {
+  height: 64rpx;
+  text-align: center;
+  line-height: 64rpx;
+  margin: 20rpx 28rpx 20rpx 0;
+}
+
+.tool-item {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 30rpx;
+}
+
+.tool-item image {
+  height: 50rpx;
+  width: 50rpx;
+  vertical-align: -3px;
+  margin-right: 10rpx;
+}
+
+.scrollView {
+  width: 100%;
+  height: 100%;
+}
+
+.image {
+  margin-bottom: 5rpx;
+  width: 100%;
+}
+
+.backpicture {
+  width: 100%;
+  position: relative;
+}
+
+.background {
+  width: 100%;
+}
+
+.item {
+  width: 100%;
+  height: 30px;
+  position: absolute;
+  right: 0;
+  margin: auto;
+  color: white;
+}
+
+.title {
+  bottom: 44px;
+  font-size: 35px;
+  left: 11px;
+  font-weight: bold;
+}
+
+.role {
+  position: relative;
+  width: 43px;
+  height: 20px;
+  bottom: -4px;
+  font-size: 14px;
+  left: 0px;
+  color: white;
+  background-color: #027bb4;
+  border-radius: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.content {
+  font-size: 14px;
+  margin-top: 5px;
+  position: relative;
+  left: 10px;
+  margin-bottom: 5px;
+}
+
+.authorname {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  left: 10px;
+}
+
+.nickname {
+  font-size: 20px;
+}
+
+.info-set {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  left: 325px;
+  bottom: 55px;
+  margin: auto;
+}

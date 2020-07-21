@@ -1,0 +1,39 @@
+<!--pages/lookusers/lookusers.wxml-->
+<view class='container' wx:for="{{works}}">
+  <view class='backpicture'>
+    <image class="image background" src='{{item.fileID[0]}}' mode="aspectFill" />
+    <text class='item title'>{{item.title}}</text>
+  </view>
+  <view>
+    <view class='authorname' bindtap='getAuthorInfo'>
+      <text class='nickname'>{{item.authorname}}</text>
+      <view class='role'>
+        <text class='role-madou'>{{item.role}}</text>
+      </view>
+    </view>
+    <image src='/image/设置.png' class='info-set' mode='scaleToFill' wx:if="{{deleted}}" bindtap="onRemove"></image>
+  </view>
+  <view class='content'>{{ item.content}}</view>
+
+  <image wx:for="{{item.fileID}}" class="image" src='{{item}}' mode="widthFix" bindtap="handleImagePreview" />
+  <!--
+  <view class='tool'>
+    <view class="tool-item" catchtap='onUpTap'>
+      <image wx:if="{{upStatus}}" src="/image/like_filled.png"></image>
+      <image wx:else src="/image/like.png"></image>
+      <text>{{upNum}}</text>
+    </view>
+   
+    <view class="tool-item" catchtap='onCollectionTap'>
+      <image wx:if="{{CollectionStatus}}" src="/image/star_filled.png"></image>
+      <image wx:else src="/image/star.png"></image>
+      <text>{{CollectionNum}}</text>
+    </view>
+   
+  </view>
+   -->
+
+
+
+
+</view>

@@ -1,0 +1,41 @@
+<!--pages/publish/publish.wxml-->
+<view class="container">
+  <view class='work-name'>作品名</view>
+  <view class='page-section work-info'>
+    <input class="input show" confirm-type="next" placeholder="" bindinput="handleTitleInput" value="{{searchinput}}">
+    </input>
+  </view>
+  <view class='work-name'>作品简介</view>
+  <view class='page-section work-info'>
+    <textarea class="input" confirm-type="next" auto-focus placeholder="" bindinput="handleContentInput" value="{{searchinput}}">
+    </textarea>
+  </view>
+  <view class='work-name'>上传图片</view>
+  <view class='page-section-image'>
+
+    <view class='picup'>
+
+      <block wx:for="{{images}}" wx:key="*this">
+        <view class="q-image-wrap">
+          <!-- 图片缩略图  -->
+          <image class="q-image" src="{{item}}" mode="aspectFill" data-idx="{{index}}" bindtap="handleImagePreview"></image>
+          <!-- 移除图片的按钮  -->
+          <view class="q-image-remover" data-idx="{{index}}" bindtap="removeImage">
+            <image src="/image/close.png" class='deletepic'></image>
+          </view>
+        </view>
+      </block>
+      <image class="image" src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557567919626&di=802fa04e10e2382bc8edfc043423cbe8&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2F9817192fbf6914a38e77e0d289253e6d2f8d88b71635-VDp6dR_fw658'
+        bindtap="doUpload" mode="scaleToFill	"></image>
+    </view>
+  </view>
+  <view class='work-name'>我是...</view>
+  <view class='page-section'>
+    <radio-group class="radio-group" bindchange="radioChange">
+      <label class="radio" wx:for="{{radioItems}}">
+        <radio value="{{item.name}}" checked="{{item.checked}}" id="{{index}}" /> {{item.value}}
+      </label>
+    </radio-group>
+  </view>
+  <button class="button" bindtap='onAdd'>确认发布</button>
+</view>

@@ -1,0 +1,14 @@
+<!--pages/user-info/user-info.wxml-->
+<view class="container">
+  <view class='work-name'>手机号</view>
+  <view class='page-section work-info'>
+    <input class="input show" confirm-type="next" auto-focus placeholder="" bindinput="handlePhoneNumInput" value="{{contacts[0].PhoneNum}}" maxlength="11">
+    </input>
+  </view>
+  <view class='work-name'>微信号</view>
+  <view class='page-section work-info'>
+    <input class="input show" confirm-type="next" placeholder="" bindinput="handleWeichatNumInput" value="{{contacts[0].WeiChatNum}}">
+    </input>
+  </view>
+  <button class="button" bindtap='onAdd'>保存</button>
+</view>

@@ -1,0 +1,138 @@
+/* pages/user/user.wxss */
+.container{
+  width: 100%;
+  height: 100%;
+}
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.backpicture{
+  width: 100%;
+  height: 300rpx;
+  position: relative;
+}
+.backimage{
+  height: 150px;
+  width: 100%;
+}
+.buttons{
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+}
+.button{
+  width: 100%;
+  background-color: #fff;
+  border: none;
+  font-size: 30rpx;
+}
+.button::after{
+  border: 2rpx;
+}
+
+.image-person{
+  position: absolute;
+  bottom: 30rpx;
+  left:64rpx;
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+.info-set{
+  position: absolute;
+  width: 30rpx;
+  height: 30rpx;  
+  left:160rpx;
+  bottom: 110rpx;
+  margin: auto;
+}
+.userinfo-nickname{
+  width: 100%;
+  height: 60rpx;  
+  position: absolute;
+  left:200rpx;
+  right: 0;
+  bottom: 30rpx;
+  margin: auto;
+  color:white;
+  font-size: 30rpx;
+}
+.backpicture{
+  margin-bottom: 10rpx;
+}
+
+.image{
+  height: 243rpx;
+  width: 243rpx;
+  border: 4.6rpx solid white;
+  text-align: center;
+}
+.lookview{
+  margin-bottom: 10rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.after{
+  font-weight: bold;
+}
+.button1{
+  width: 185rpx;
+  height: 60rpx;
+  background-color: #fff;
+  border: none;
+  font-size: 30rpx;
+  position: absolute;
+  left:500rpx;
+  right: 0;
+  bottom: 40rpx;
+  margin: auto;
+  font-weight: bold;
+  line-height: 60rpx;
+}
+.infoimage{
+  width: 20rpx;
+  height: 20rpx;  
+  position: absolute;
+  left:640rpx;
+  right: 0;
+  bottom: 80rpx;
+  margin: auto;
+}
+.button0{
+  width: 185rpx;
+  height: 60rpx;
+  font-size: 30rpx;
+  position: absolute; 
+  left: 34rpx;
+  bottom: 40rpx;
+  margin: auto;
+  font-weight: bold;
+  line-height: 60rpx;
+  background-color: transparent;
+  border: none;
+}
+
+.textlogin{
+  color: #f8f8f8;
+}
+.workshow{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+.xiaoxi{
+  width:50rpx;
+  height:50rpx;
+  position: absolute; 
+  left:650rpx;
+  bottom: 44rpx;
+  margin: auto;
+}

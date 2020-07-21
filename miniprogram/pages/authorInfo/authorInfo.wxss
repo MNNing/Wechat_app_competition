@@ -1,0 +1,110 @@
+/* pages/authorInfo/authorInfo.wxss */
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.backpicture {
+  width: 100%;
+  height: 150px;
+  position: relative;
+}
+
+.backimage {
+  height: 150px;
+  width: 100%;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+}
+
+.button {
+  width: 100%;
+  background-color: #fff;
+  border: none;
+  font-size: 15px;
+}
+
+.button::after {
+  border: 1px;
+}
+
+.userinfo-nickname {
+  width: 100%;
+  height: 30px;
+  position: absolute;
+  left: 28px;
+  right: 0;
+  bottom: 25px;
+  margin: auto;
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.backpicture {
+  margin-bottom: 5px;
+}
+
+.work {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.image {
+  height: 243rpx;
+  width: 243rpx;
+  border: 4.6rpx solid white;
+  text-align: center;
+}
+
+.lookview {
+  margin-bottom: 10rpx;
+  align-items: center;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.button1 {
+  width: 185rpx;
+  height: 60rpx;
+  background-color: #fff;
+  border: none;
+  font-size: 15px;
+  position: absolute;
+  left: 250px;
+  right: 0;
+  bottom: 20px;
+  margin: auto;
+  font-weight: bold;
+  line-height: 30px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.button1::after {
+  border: 1px;
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.after {
+  width: 100%;
+  height: 60rpx;
+  background-color: #ec808d;
+}

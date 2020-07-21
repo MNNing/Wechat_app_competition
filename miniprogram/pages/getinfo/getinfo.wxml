@@ -1,0 +1,81 @@
+<!--pages/getinfo/getinfo.wxml-->
+<view class='container'>
+  <view class='buttons'>
+
+    <button bindtap="datedefault" class='button' hover-class="other-button-hover">
+      <text class='after' wx:if="{{date}}">{{"未处理"}}</text>
+      <text class='before' wx:else>{{"未处理"}}</text>
+    </button>
+    <button bindtap="afterdefault" class='button' hover-class="other-button-hover">
+      <text class='after' wx:if="{{after}}">{{"已处理"}}</text>
+      <text class='before' wx:else>{{"已处理"}}</text>
+    </button>
+    <button bindtap="minedefault" class='button' hover-class="other-button-hover">
+      <text class='after' wx:if="{{mine}}">{{"我的约拍"}}</text>
+      <text class='before' wx:else>{{"我的约拍"}}</text>
+    </button>
+  </view>
+  <view class='mybook' wx:if="{{date}}" wx:for="{{bookinfos}}">
+    <view class='userReq' wx:if="{{item.flag}}">
+      <view class='nickname' bindtap='oneclick' id="{{index}}">{{item.myname}}</view>
+      <button bindtap="agree" class='button1 agree' id="{{index}}" hover-class="other-button-hover">同意约拍</button>
+      <button bindtap="disagree" class='button1 disagree' id="{{index}}" hover-class="other-button-hover">拒绝约拍</button>
+    </view>
+  </view>
+
+  <view class='booked' wx:if="{{after}}">
+    <view class='userReq' wx:for="{{showworks}}" wx:if="{{bookinfoed.length-item>=0}}">
+      <view class='name-agree'>
+        <view class='nickname' bindtap='oneclick' id="{{index}}">{{bookinfoed[bookinfoed.length-item].askname}}
+        </view>
+        <view wx:if="{{bookinfoed[bookinfoed.length-item].agree&&!bookinfoed[bookinfoed.length-item].disagree}}" class='deal'>已同意</view>
+        <view wx:if="{{!bookinfoed[bookinfoed.length-item].agree&&bookinfoed[bookinfoed.length-item].disagree}}" class='deal'>已拒绝</view>
+      </view>
+
+      <view class='asknum' wx:if="{{bookinfoed[bookinfoed.length-item].agree&&!bookinfoed[bookinfoed.length-item].disagree}}">
+        <view class='numshow'>
+          <image src='/image/shouji.png' class='phone'></image>
+          <text class='phone-weichat'>{{bookinfoed[bookinfoed.length-item].phoneNum}}</text>
+
+        </view>
+        <view class='numshow'>
+          <image src='/image/weixin.png' class='phone'></image>
+          <text class='phone-weichat'>{{bookinfoed[bookinfoed.length-item].weiChatNum}}</text>
+
+        </view>
+
+
+      </view>
+    </view>
+  </view>
+
+  <view class='message' wx:if="{{mine}}">
+    <view class='userReq' wx:for="{{showworks}}" wx:if="{{messages.length-item>=0}}">
+      <view class='name-agree'>
+        <view class='nickname' bindtap='oneclick' id="{{index}}">{{messages[messages.length-item].anwsername}}
+        </view>
+        <view wx:if="{{messages[messages.length-item].agree&&!messages[messages.length-item].disagree}}" class='deal agreem'>对方已同意</view>
+        <view wx:if="{{!messages[messages.length-item].agree&&messages[messages.length-item].disagree}}" class='deal agreem'>对方已拒绝</view>
+      </view>
+
+      <view class='asknum' wx:if="{{messages[messages.length-item].agree&&!messages[messages.length-item].disagree}}">
+        <view class='numshow'>
+          <image src='/image/shouji.png' class='phone'></image>
+          <text class='phone-weichat'>{{messages[messages.length-item].answerPhoneNum}}</text>
+
+        </view>
+        <view class='numshow'>
+          <image src='/image/weixin.png' class='phone'></image>
+          <text class='phone-weichat'>{{messages[messages.length-item].answerWeiChatNum}}</text>
+
+        </view>
+
+
+      </view>
+    </view>
+  </view>
+
+
+
+
+</view>

@@ -1,0 +1,15 @@
+<!--pages/authorInfo/authorInfo.wxml-->
+<view class="container">
+  <view class="backpicture">
+    <image class="backimage" src='/image/msc.jpg' mode='scaleToFill'></image>
+    <text class="userinfo-nickname">{{works[0].authorname}}</text>
+    <button bindtap="book" class='button1' hover-class="other-button-hover">
+      <text class='before' wx:if="{{booked}}" bindtap='wantbook'>想约</text>
+      <view class='after' wx:else>已想约</view>
+    </button>
+  </view>
+  <view class='text'>作品集</view>
+  <view class='lookview'>
+    <image wx:for="{{works}}" wx:if="{{item.fileID[0]}}" src='{{item.fileID[0]}}' class='image' mode="aspectFill" bindtap='oneclick' id="{{index}}"></image>
+  </view>
+</view>
